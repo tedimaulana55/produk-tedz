@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tedz Digital Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #1e3a8a, #1e40af);
+      color: white;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h2 {
+      color: #facc15;
+      margin-bottom: 0.7rem;
+    }
+
+    .card p {
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0f172a;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tedz Digital Services</h1>
+    <p>Layanan digital terpercaya untuk kebutuhan panel, murban, dan pembayaran</p>
+  </header>
+
+  <section class="services">
+
+    <div class="card">
+      <h2>Panel Pterodactyl</h2>
+      <p>Cocok Buatkan Kalian Yang Sewa Bot dan Buka Murid bug, panel Fast Anti Delay</p>
+      <a href="panel.html" class="btn">Lihat Harga</a>
+    </div>
+
+    <div class="card">
+      <h2>Murban / Murid Banned</h2>
+      <p>Bisa Manjadi Kang Banned Dan Bisa Opan Jasa Banned</p>
+      <a href="murban.html" class="btn">Lihat Harga</a>
+    </div>
+
+    <div class="card">
+      <h2>Payment</h2>
+      <p>Menerima pembayaran melalui DANA, GOPAY, DAN QRIS.</p>
+      <a href="payment.html" class="btn">Cek Metode</a>
+    </div>
+    
+    <!-- Kontrol Musik -->
+  <div style="text-align: center; margin: 30px 0;">
+    <button id="musicBtn" onclick="toggleMusic()" style="padding: 10px 20px; background: #10b981; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+      ▶️ Mainkan Musik
+    </button>
+    <audio id="bgMusic" loop>
+      <source src="music.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
+  </div>
+  
+  <script>
+  const music = document.getElementById("bgMusic");
+  const musicBtn = document.getElementById("musicBtn");
+  let isPlaying = false;
+
+  function toggleMusic() {
+    if (isPlaying) {
+      music.pause();
+      musicBtn.textContent = "▶️ Mainkan Musik";
+    } else {
+      music.play().catch(err => alert("Gagal memutar musik: " + err.message));
+      musicBtn.textContent = "⏸ Hentikan Musik";
+    }
+    isPlaying = !isPlaying;
+  }
+</script>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Tedz Digital Services • Solusi Cepat & Terpercaya ⚡
+  </footer>
+
+</body>
+</html>
