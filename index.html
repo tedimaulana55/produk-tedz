@@ -719,7 +719,11 @@ function closeModal() {
       alert('Tersalin: ' + el.value);
     }
     
-    function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+  const musicBtn = document.getElementById("musicBtn");
+  let isPlaying = false;
+
+  function toggleMusic() {
     if (isPlaying) {
       music.pause();
       musicBtn.textContent = "▶️ Mainkan Musik";
@@ -728,7 +732,7 @@ function closeModal() {
       musicBtn.textContent = "⏸ Hentikan Musik";
     }
     isPlaying = !isPlaying;
-  }
+    }
     
   </script>
   <!-- Modal QRIS - PINDAHKAN KE SINI -->
